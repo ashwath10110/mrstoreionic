@@ -23,6 +23,15 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'landing',
+        children: [
+          {
+            path: '',
+            loadChildren: '../landing/landing.module#LandingPageModule'
+          }
+        ]
+      },
+      {
         path: 'about',
         children: [
           {
