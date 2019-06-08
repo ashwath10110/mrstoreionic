@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Orders
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="navigateToCart('cart')">
+        <ion-icon name="cart" slot="icon-only" no-margin class="white top-btn"></ion-icon>
+        <ion-badge id="cart-badge">{{ cartItems }}</ion-badge>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-segment mode="md" (ionChange)="seg($event)" scrollable="true" id="dag">
+      <ion-segment-button [attr.id]="'seg_' + i" *ngFor="let item of menuTabs; let i = index" no-margin no-padding
+        (ionSelect)="update(i)" [value]="item.name" [ngClass]="{ 'btn-active': segment == item.name }">
+        <ion-text padding-horizontal>{{ item.name }}</ion-text>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding color="light">
+  <ion-slides pager="false" [options]="slideOpts" (ionSlideDidChange)="change()" (click)="preventDefault($event)">
+    <ion-slide *ngFor="let tab of menuTabs">
+      Selected {{tab.name}}
+      <!-- <app-productlist [recieved_data]="products"></app-productlist> -->
+    </ion-slide>
+  </ion-slides>
+</ion-content>

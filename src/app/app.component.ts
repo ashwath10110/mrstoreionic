@@ -14,13 +14,23 @@ export class AppComponent implements OnInit {
   pages = [
     {
       title: 'Login',
-      url: '/login',
+      url: '/tabs/login',
       icon: 'log-in'
     },
     {
       title: 'Contact',
       url: '/tabs/contact',
       icon: 'person'
+    },
+    {
+      title: 'Home',
+      url: '/tabs/home',
+      icon: 'person'
+    },
+    {
+      title: 'Products',
+      url: '/tabs/products',
+      icon: 'information-circle'
     },
     {
       title: 'About',
@@ -31,7 +41,38 @@ export class AppComponent implements OnInit {
       title: 'Landing',
       url: '/tabs/landing',
       icon: 'information-circle'
-    }
+    },
+    {
+      title: 'Orders',
+      url: '/tabs/orders',
+      icon: 'information-circle'
+    },
+    {
+      title: 'Addresses',
+      url: '/tabs/addresses',
+      icon: 'information-circle'
+    },
+    {
+      title: 'Payment',
+      url: '/tabs/payment',
+      icon: 'information-circle'
+    },
+    {
+      title: 'Order Result',
+      url: '/tabs/order-result',
+      icon: 'information-circle'
+    },
+    {
+      title: 'Profile',
+      url: '/tabs/profile',
+      icon: 'information-circle'
+    },
+    {
+      title: 'Cart',
+      url: '/tabs/cart',
+      icon: 'information-circle'
+    },
+    
   ];
 
   constructor(

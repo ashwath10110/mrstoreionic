@@ -14,6 +14,15 @@ const routes: Routes = [
         pathMatch: 'full',
       },
       {
+        path: 'login',
+        children: [
+          {
+            path: '',
+            loadChildren: '../login/login.module#LoginPageModule'
+          }
+        ]
+      },
+      {
         path: 'home',
         children: [
           {
@@ -28,6 +37,15 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: '../landing/landing.module#LandingPageModule'
+          }
+        ]
+      },
+      {
+        path: 'products',
+        children: [
+          {
+            path: '',
+            loadChildren: '../products/products.module#ProductsPageModule'
           }
         ]
       },
@@ -48,7 +66,79 @@ const routes: Routes = [
             loadChildren: '../contact/contact.module#ContactPageModule'
           }
         ]
-      }
+      },
+      {
+        path: 'services',
+        children: [
+          {
+            path: '',
+            loadChildren: '../services/services.module#ServicesPageModule'
+          }
+        ]
+      },
+      {
+        path: 'orders',
+        children: [
+          {
+            path: '',
+            loadChildren: '../orders/orders.module#OrdersPageModule'
+          }
+        ]
+      },
+      {
+        path: 'login',
+        children: [
+          {
+            path: '',
+            loadChildren: '../login/login.module#LoginPageModule'
+          }
+        ]
+      },
+      {
+        path: 'addresses',
+        children: [
+          {
+            path: '',
+            loadChildren: '../addresses/addresses.module#AddressesPageModule'
+          }
+        ]
+      },
+      {
+        path: 'payment',
+        children: [
+          {
+            path: '',
+            loadChildren: '../payment/payment.module#PaymentPageModule'
+          }
+        ]
+      },
+      {
+        path: 'order-result',
+        children: [
+          {
+            path: '',
+            loadChildren: '../order-result/order-result.module#OrderResultPageModule'
+          }
+        ]
+      },
+      {
+        path: 'profile',
+        children: [
+          {
+            path: '',
+            loadChildren: '../profile/profile.module#ProfilePageModule'
+          }
+        ]
+      },
+      {
+        path: 'cart',
+        children: [
+          {
+            path: '',
+            loadChildren: '../cart/cart.module#CartPageModule'
+          }
+        ]
+      },
     ]
   },
   {
@@ -62,4 +152,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class TabsPageRoutingModule {}
+export class TabsPageRoutingModule { }
